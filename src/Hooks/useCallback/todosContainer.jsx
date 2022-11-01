@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import Todos from "./todos";
 
 const TodosContainer = () => {
@@ -8,11 +8,14 @@ const TodosContainer = () => {
   const increment = () => {
     setCount((c) => c + 1);
   };
-  const addTodo = () => {
+
+  // implementation of useCallback
+  const addTodo = useCallback(() => {
     setTodos((t) => [...t, "New Todo"]);
-  };
+  }, [todos]);
 
   
+
 
   return (
     <>

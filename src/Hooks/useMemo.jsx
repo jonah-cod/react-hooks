@@ -3,7 +3,10 @@ import { useState, useMemo } from "react";
 const UseMemo = () => {
   const [count, setCount] = useState(0);
   const [todos, setTodos] = useState([]);
-  const calculation = expensiveCalculation(count);
+
+  /// adding useMemo
+
+  const calculation = useMemo(()=>expensiveCalculation(count), [count]);
 
   const increment = () => {
     setCount((c) => c + 1);

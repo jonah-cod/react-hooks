@@ -2,12 +2,16 @@ import React, { useRef } from 'react'
 
 const UseRef = () => {
       const inputElem = useRef(null)
+      const btn = useRef(null)
 
 
       const seeresult = (e)=>{
         e.preventDefault()
             console.log(inputElem.current.value)
+           console.log(btn.current.innerText) 
       }
+
+      
      
   return (
     <div>
@@ -18,7 +22,7 @@ const UseRef = () => {
                     placeholder='type here'/>
 
 
-            <button onClick={seeresult}>See</button>
+            <button ref={btn} onClick={seeresult}>See</button>
       </form>
     </div>
   )

@@ -8,10 +8,11 @@ function App() {
     <div className="App">
       
 
-      <UseRef />
+      {/* <UseRef /> */}
+
       {/* <UseMemo/> */}
       {/* <TodosContainer/> */}
-      {/* <UseContext /> */}
+      <UseContext />
     </div>
   );
 }
